@@ -10,8 +10,8 @@ RUN apt update && \
     dpkg-reconfigure --frontend=noninteractive locales && \
     update-locale LANG=en_US.UTF-8
 
-ARG USER=testuser
-ARG PASS=1234
+ARG USER=kawin
+ARG PASS=kawin123@
 
 RUN useradd -m $USER -p $(openssl passwd $PASS) && \
     usermod -aG sudo $USER && \
